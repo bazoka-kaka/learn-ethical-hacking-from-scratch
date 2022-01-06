@@ -1,0 +1,58 @@
+WHAT I ARP POISONING 
+====================
+
+- the hacker is gonna be in the middle of the connection 
+between a user and the internet (not the router but it's replaced by us)
+
+client --> us --> router --> internet 
+or 
+internet --> router --> us --> client 
+
+ADDRESS RESOLUTION PROTOCOL (ARP)
+---------------------------------
+
+- simple protocol used to map IP address of a machine 
+to its MAC address 
+(bassically to link IP addresses to MAC addresses)
+
+- how to get the mac address of another device? 
+1. sends ARP request to all of the devices 
+in the range 
+2. the only one that's gonna respond to the sender is the one 
+that has the ip address that the sender sends 
+3. the rest will ignore the request 
+
+- the response is the ip address and the mac 
+address of the target 
+
+- each computer has an ARP table which links IP addresses 
+of the same network to their MAC addresses
+
+> arp -a 
+note:
+this command is gonna show the arp table 
+
+- anytime a computer sends a request to the internet, 
+it'll direct that request to the MAC address of the router 
+
+note:
+the value of the router's mac address could be changed using 
+ARP protocol to our mac address therefore, we can be the man in the middle 
+because the target will think that we are the router (they're 
+gonna send their responses to our mac address)
+
+- we're gonna send two responses, one to the gateway, 
+and another to the target 
+
+we're gonna tell the gateway that we're the victim, 
+and to the victim that we're the gateway
+
+(by changing the arp table of each to our mac address as its destinations)
+
+ARP SPOOFING 
+------------
+
+why arp spoofing is possible:
+1. clients accept responses even if they did not send a request 
+2. clients trust response without any form of verification 
+

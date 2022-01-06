@@ -1,0 +1,42 @@
+--> There are a number of tools you can do to run this attack
+which is an arp spoofing attack, you can even build your own
+here we are going to use a tool called arpspoof
+
+ARP SPOOFING USING ARPSPOOF
+- arpspoof tool to run arp spoofing attacks,
+- simple and reliable
+- ported to most operating systems including android and ios
+- usage is always the same
+
+use:
+arpspoof -i [interface] -t [clientIP] [gatewayIP]
+arpspoof -i [interface] -t [gatewayIP] [clientIP]
+
+in the next ones we are going to use a tool called bettercap
+because it has more features
+
+note: you can only use this tool to redirect the flow of data
+and make it flow through your computer then you'll have to use
+another tool like a packet sniffer like wireshark to analyze 
+this data and do more things with it
+
+this is the full example: 
+> arpspoof -i wlan0 -t 192.168.1.13 192.168.1.1
+> arpspoof -i wlan0 -t 192.168.1.1 192.168.1.13
+
+you should be doing the attack againts a virtual nat network
+all you'll have to do is to make sure that the kali machine and
+the windows machine are both configured to use the same NAT network
+
+to see the change you have to do this command in the target machine:
+> arp -a
+you'll see that the mac address of the router is changed
+
+note:
+this arpspoof is not going to make your kali linux able 
+to intercept datas therefore the internet or network is not
+going to flow, you have to manually set it to work
+using this command: 
+> echo 1 > /proc/sys/net/ipv4/ip_forward
+
+

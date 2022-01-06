@@ -1,0 +1,14 @@
+INTRO TO NETWORK PENETRATION TESTING 
+====================================
+
+1. Network Hacking 
+a. pre-connection Attacks
+you just have a computer with a network interface
+what can you do before connecting to anything
+
+b. gaining access 
+crack wifi keys 
+
+c. post-connection attacks 
+after you're able to connect to the network 
+

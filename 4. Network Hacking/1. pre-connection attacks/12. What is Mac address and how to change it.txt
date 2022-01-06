@@ -1,0 +1,55 @@
+WHAT IS MAC ADDRESS?
+- Media Access Control
+permanent
+physical 
+unique
+- Assigned by manufacturer to any device interfaces
+
+this MAC address is always there whether it's just a 
+wireless card, wired card, Ethernet card
+you are going to find anything that is called a 
+MAC address
+
+this is unique and there is none that is the same
+for their MAC address
+
+this will always be the same forever unless we change
+it which is temporary and after you unplug your device
+or restart it you will see that its mac address is
+going back to the original one
+
+IP = to identify computers and communicate between
+devices on the internet 
+
+MAC = to identify devices and transfer data between
+devices.
+
+each piece of data or packet that is sent within 
+the network contain something that is called
+a destination mac and a source mac
+
+this packet will flow the source MAC to the destination MAC
+
+WHY CHANGE THE MAC ADDRESS?
+1. increase anonimity 
+2. impersonate other devices
+3. bypass filters
+
+this is how:
+> ifconfig wlan0 down
+> ifconfig wlan0 hw ether 00:11:22:33:44:55
+> ifconfig wlan0 up
+note:
+ifconfig - show all the network interfaces on our kali 
+machine 
+network interface - any device that allows us to connect
+to the internet ex: wifi card, Ethernet card, and
+so on
+eth0 - this is a virtual interface that is created
+by virtual box when we set kali to use a nat network
+ether - contains the information of the MAC address
+of this virtual interface
+hw - this is a command to change something
+
+to change the MAC address you have to first disable 
+the interface 

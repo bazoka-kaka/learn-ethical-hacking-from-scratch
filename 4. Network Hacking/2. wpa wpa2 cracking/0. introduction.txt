@@ -1,0 +1,44 @@
+WPA/WPA2 CRACKING
+- both can be cracked using the same methods
+- made to address the issues in WEP
+- much more secure
+- each packet is encrypted using a unique temporary key
+
+--> packets contain no useful information
+
+the only difference between wpa and wpa2 is the encryption
+used, 
+WPA uses TKIP
+WPA2 uses CCMP
+
+WPA/WPA2 CRACKING ARP REQUEST REPLAY
+- WPS is a feature that can be used with WPA and WPA2
+- allows clients to connect without the password
+- authentication is done using an 8 digit pin
+-- 8 digits is very small
+-- we can try all possible pins in relatively short time
+-- then the WPS pin can be used to compute the actual password
+
+PS: This only works if the router is configured not to use
+PBC (Push Button Authentication)
+
+we are not actually encrypting some WPA or WPA2 stuffs, 
+but we are exploiting a feature if enabled, could be used
+to enter  into the network
+
+first, the wps has to be enabled on the network because
+it can't be disabled, also it needs to be misconfigured
+meaning it needs to be configured to use a normal PIN 
+authentication and not a Push Button Authentication
+
+if push button authentication is used, then the router will refuse
+any PINs that we try unless the WPS button is pressed on the router
+
+meaning in real life, WPS is going to be enabled by default
+or the PBC is going to be enabled by default meaning
+you have to actually set it 
+
+
+
+
+

@@ -1,0 +1,13 @@
+INITIAL PREPARATION
+===================
+
+ENABLING VIRTUALIZATION 
+VT-X/AMD-V/SVM
+
+- feature required to start virtual machines
+- enabled by default on apple computers
+- might need to be enabled using BIOS on other computers 
+
+checking if already enabled:
+start --> task manager --> more details --> performance --> see virtualization (disabled or enabled)
+(mine is enabled so deal with it)

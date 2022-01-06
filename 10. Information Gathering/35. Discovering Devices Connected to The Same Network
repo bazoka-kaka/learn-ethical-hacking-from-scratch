@@ -1,0 +1,35 @@
+DISCOVERING DEVICES CONNECTED TO THE SAME NETWORK 
+=================================================
+
+note:
+remember to return your interface to managed mode 
+
+INFORMATION GATHERING:
+- discover all devices
+- display their:
+a. ip address
+b. mac address 
+c. operating system 
+d. open ports 
+e. running services 
+f. etc...
+
+- there are a number of programs that will do this:
+a. net discover 
+b. NMap 
+
+NET DISCOVER
+------------
+
+> netdiscover -r 192.168.1.1/254
+
+note:
+-r --> this is an ip range to search for 
+
+the first ip:
+192.168.1.0
+the last ip:
+192.168.1.254
+
+- 254 is the last ip a client can have 
+

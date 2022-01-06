@@ -1,0 +1,11 @@
+WHAT IS HACKING AND WHY LEARNING IT 
+===================================
+
+- hacking = gaining unauthorized access 
+- 3 hackers:
+a. black hat - no permission
+b. white hat - have permission 
+c. grey hat - no permission but good deed 
+
+- why hacking:
+lots of job opportunities 

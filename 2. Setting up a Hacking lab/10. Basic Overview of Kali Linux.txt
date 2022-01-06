@@ -1,0 +1,5 @@
+BASIC OVERVIEW OF KALI LINUX 
+============================
+
+- the root directory in kali linux: home
+- to look the actual location in the directory: ctrl + l (while hovering on the name of the file)

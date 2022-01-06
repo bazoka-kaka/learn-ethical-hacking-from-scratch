@@ -1,0 +1,43 @@
+monitor mode: to enable us to capture
+all the packets that are within range
+
+iwconfig - this is to see all the wireless interfaces
+only
+Managed - meaning that you are only going to capture
+all the packets that has your MAC address as its 
+destination MAC
+Monitor - meaning that you are able to capture
+all the packets that doesn't have your MAC address
+or have your MAC address as its destination MAC
+
+this is how: 
+> ifconfig wlan0 down
+> airmon-ng check kill
+> iwconfig wlan0 mode monitor
+> ifconfig wlan0 up
+
+note: 
+this airmon-ng check kill is going to kill any process
+that could interfere us changing to monitor mode
+this is not mandatory but it's going to make better results
+this is also going to kill our internet connection
+
+to check your interface mode you can type this:
+> iwconfig
+
+note:
+not all your adapter are able to support monitor mode
+you need to make sure that your actual adapter support 
+something called monitor mode
+
+THIS IS TO REENABLE THE MANAGED MODE:
+ifconfig wlan0 down
+ifconfig wlan0 mode managed
+ifconfig wlan0 up
+sudo service network-manager restart
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+WPA/WPA2 Cracking
+
+Two things needed to crack WPA/WPA2:
+1. 4-way handshake
+2. wordlist.
+
+this is how the password is matched: 
+MIC or message integrity code is what's used by the access point 
+to verify whether a password is correct or not
+it's gonna separate this and put this on the side, and
+then it's going to put all the informations in the left then 
+combine them with the first password in the wordlist 
+to generate an MIC, another message integrity code
+then it's going to compare it with the one on the handshake packet
+that we just created, then if the password is wrong, it's gonna
+move to the next key
+
+this is how it's explained simply:
+a. take a wordlist key
+b. merge with MIC
+c. compare with the password from the handshake 
+d.1 if false then go back to a to the next word list key
+d.2 if true then go enter the network
+
+this is the command:
+> aircrack-ng (handshake file name.cap) -w (wordlist file name.txt)
+
+real example: 
+> aircrack-ng test.cap -w handshake.txt
+

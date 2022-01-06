@@ -1,0 +1,10 @@
+attacks that you can do after connecting to your target network
+
+1. Network Hacking
+a. pre-connection attacks
+b. gaining access.
+c. post-connection attacks
+--> work againts wifi & Ethernet
+--> gather more info
+--> intercept data (usernames, passwords, etc)
+--> modify data on the fly

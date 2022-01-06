@@ -1,0 +1,30 @@
+TYPICAL NETWORK
+A network usually have clients connected to each
+other and clients usually are connecting to networks
+to share data or resources example of resource:
+internet
+
+wifi or wired work with the same principle
+
+they have:
+a server (a device) example of a server is a router
+in our hom network. server is also called an
+access point
+
+the only thing that has access to a resource is called 
+an access point/server
+none of the client has an access to resource
+without going through a server
+
+data that is transferred between a client and an access point
+is in form of a packet
+
+everything that is transmitted between access point
+and clients is called packets of datas
+
+for wifi these packets are transmitted between air
+if you are in range you'll be able to see
+all the packets that they do on the internet
+therefore you are going to be able to see all the information
+you are going to need 
+

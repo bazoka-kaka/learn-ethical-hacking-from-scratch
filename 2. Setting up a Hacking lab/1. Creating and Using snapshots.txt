@@ -1,0 +1,31 @@
+THE LAB - SNAPSHOTS
+===================
+
+- Snapshots allow you to save the of a virtual machine
+- can be used as bookmarks to go back and forward
+to different configurations
+- Store stable state, updated state, etc
+
+on your virtual box main menu you just 
+go to your machine then click on the three bars
+and click snapshots then click on the camera icon
+
+you have to give your snapshots some short of 
+description or name to make sure that you know
+what is being snapshot there
+
+then click ok
+
+then we now have something called current state
+
+you could just clickon the fresh install and install
+that version you just snapshot before
+
+note:
+you have to make a snapshot every time you want to 
+do a risky update
+
+if you want to fresh install your thing that you just
+inserted there you could do something called fresh install
+or the restart button
+

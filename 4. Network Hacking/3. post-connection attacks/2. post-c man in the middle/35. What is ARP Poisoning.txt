@@ -1,0 +1,64 @@
+These are attacks that we can do only if we can intercept
+the communication between 2 devices hence the name
+man in the middle atacks
+
+in the man in the middle attack, the hacker will be able to 
+place themselves in the  middle of connection between 
+two devices.
+
+ARP SPOOFING ATTACK
+--> this is redirecting the flow of packets instead of flowing
+right from target to target, it's gonna flow through our computers
+first then we redirect the flow to another target, 
+we could literally do anything to that information or packets
+before redirecting it in a really fast speed
+
+ARP (ADDRESS RESOLUTION PROTOCOL)
+--> this is simple protocol used to map IP address of a machine to 
+its MAC addresses
+--> you have to know the mac addresses of both the target by
+doing some ARP protocol 
+--> this is how it happens: 
+- sends broadcast message (ARP requests) to every devices
+connected to the network
+- the only ones answering are the ones that is requested
+by anyone sending the ARP requests. The response
+is called an ARP response
+note:
+an ARP response consists of 2 things:
+-- mac address of that device
+-- ip address of that device
+
+note:
+MAC address is the ones used for communication between devices
+all these things or communications are used or facilitated
+using the ARP protocol
+
+the whole point of ARP requests is just so that we could link
+ip addresses to mac addresses or translate ip addresses
+to mac addresses
+
+each computer has something called ip tables which links ip addresses
+on the same network to their mac addresses
+
+this is the command on most of the available operating system: 
+> arp -a
+note: this is going to show us an arp table
+
+we are sending 2 arp responses:
+1. to the gateway:
+we are telling the gateway that we are at the ip address of the 
+victim then will associate the mac address of the gateway
+with our own mac address
+2. to the victim:
+we are telling the victim that we are at the ip address of 
+the gateway then will associate the mac address of the target
+with our own mac address
+
+therefore the victim is gonna think we are the router and
+the router will think that we are the victim at the same time
+
+WHY ARP SPOOFING IS POSSIBLE:
+1. clients accept responses even if they did not send a request
+2. clients trust response without any form of verification
+

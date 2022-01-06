@@ -1,0 +1,65 @@
+WPA/WPA2 CRACKING
+- the handshake does not contain data the helps recover the key
+- it contains data that can be used to check if a key is valid
+or not
+
+the handshake doesn't contain any information that can help us
+to recover or recalculate the WPA key. the information in it 
+can only be used to check whether a password is valid or not
+
+therefore we have to create a wordlist containing any possible
+combinations to findout whether one of them is correct or not
+and if one of them matches, the password is found
+
+note:
+you can download the password lists from the internet
+
+THIS IS HOW YOU CREATE A WORDLIST
+Crunch can be used to create a wordlist
+
+syntax:
+> crunch[min][max][characters]-t[pattern]-o[FileName]
+
+example: 
+> crunch 6 8 123abc$ -o wordlist -t a@@@@b
+
+generated passes: 
+aaaaab
+aabbbb
+aan$$b
+
+note:
+this is going to create a combination of 123abc$ to the 
+wordlist also 6 as its minimum character and 8 as its maximum
+-o meaning it's going to be stored in a file called wordlist
+> -t meaning  it's got this pattern of a@@@@b
+
+> man crunch
+note:
+this is going to give the instructions and all the things
+you can do with crunch 
+
+-p meaning telling crunch to generate password that don't have
+repeating character for example: 
+aaaaab <-- this is not going to be stored by crunch since
+it's not likely that a password will be seen like that
+
+this is the example: 
+> crunch 6 8 abc12 -o test.txt
+
+note:
+the min length is 6 and the max is 8
+then the combinations is abc12 and the file where
+we are going to store them is test.txt
+
+to open the file this is the command: 
+> cat test.txt
+
+
+jokokav92
+
+> crunch 9 9 jokav92 -t jok@ka@92 -o wordlist
+
+crunch min max characters -t patterns -o filename.txt
+
+aircrack-ng something.cap -w wordlist

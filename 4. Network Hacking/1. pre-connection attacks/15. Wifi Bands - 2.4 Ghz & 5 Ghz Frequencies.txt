@@ -1,0 +1,47 @@
+WIFI BANDS
+- decides the frequency range that can be used
+- determines the channels that can be used
+- clients need to support band used by router to communicate
+with it
+- data can be sniffed from a certain band if the wireless
+adapter used supports that band
+
+Most common WiFi Bands are:
+- a uses 5 Ghz frequency only
+- b, g both uses 2.4 Ghz frequency only
+- n uses 5 and 2.4 Ghz
+- ac uses frequencies lower than 6 Ghz
+
+our previous airodump-ng is not scanning all the
+wireless networks there is but it just do this 
+scanning of the 2.4 Ghz frequency
+
+SNIFFING AND DISCOVER 5 Ghz NETWORKS
+--> you need to make your wireless adapter to listen
+to both the 2.4 and 5 Ghz channels
+this is the command: 
+> airodump-ng --band a wlan0
+note:
+this is going to capture all the 5 Ghz only 
+
+what you can also do: 
+you can specify multiple bands for the same band 
+command:
+this is the command:
+> airodump-ng --band abg wlan0
+
+note:
+this is going to capture 5 and 2.4 Ghz networks
+also clients that is connected to both bands
+
+the problem: 
+you need a powerful wireless adapter and it's going
+to be slightly slower
+
+if you want quicker results you just do some band a
+
+to sniff data from 5 Ghz frequency, your adapter needs
+to support the sniffing of those datas therefore
+you aren't going to be able to do so if your band
+doesn't support those things
+

@@ -1,0 +1,63 @@
+WHAT IS MAC ADDRESS AND HOW TO CHANGE IT 
+========================================
+
+- MAC - Media Access Control
+a. permanent
+b. physical
+c. unique
+
+- assigned by manufacturer 
+
+- ip address --> IP addresses are used to uniquely identifies the connection of 
+the network with that device takes part in a network.
+
+- mac address --> MAC Address is used to ensure the physical address of the computer
+
+MAC, address -- identifies a device to other devices on the same local network. 
+The internet address -- or IP address -- identifies the device globally
+
+local identification vs. global identification;
+Layer 2 vs. Layer 3 operation;
+physical address vs. logical address;
+number of bits;
+address assignment and permanence; and
+address formatting.
+
+The MAC address is only significant on the LAN to which a device is connected, 
+and it is not used or retained in the data stream once packets leave that network.
+
+Any piece of internet software, such as a web browser, directs data to a destination 
+on the internet using the destination's IP address.
+
+IP address is bound to a network device via software configurations, and network 
+administrators can change it at any time.
+Media access control refers to the piece of hardware that controls how data is 
+pushed out onto a network.
+
+A MAC address consists of 12 hexadecimal digits,
+usually grouped into six pairs separated by hyphens.
+
+- mac address is to transfer data between devices 
+
+- WHY CHANGE MAC ADDRESS?
+a. increase anonimity
+b. impersonate other device
+c. bypass filters 
+
+- in kali:
+inet --> this is the ip address
+ether --> this is the mac address 
+
+- disabling an interface:
+> ifconfig wlan0 down
+
+- changing the mac:
+> ifconfig wlan0 hw ether 00:11:22:33:44:55
+
+note:
+hw --> means change 
+ether --> means we wanna change the mac address 
+
+- enabling the interface:
+> ifconfig wlan0 up 
+

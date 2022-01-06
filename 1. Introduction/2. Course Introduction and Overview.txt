@@ -1,0 +1,38 @@
+COURSE INTRODUCTION AND OVERVIEW
+================================
+
+0. setting up pentesting LAB
+
+1. Network Hacking
+- how network work
+- how devices communicate with each other 
+- how to exploit this method of communication
+to control all the connections around you, crack wifi keys, 
+gain access to wifi network 
+whether they use WEP, WPA, or wpa2, 
+intercept data, passwords, chat messages, and anything
+that anybody does on the same network
+
+2. Gaining Access
+- how to gain access to servers and pc
+- learn how to gather comprehensive information 
+about your target, discover vulnerabilities, and exploit them 
+- create undetectable backdoors and use social engineering 
+to deliver them to your target as a fake update, pdf, 
+image, or any other files 
+- spoof email so that they think they're 
+sent from someone they know 
+
+3. Post Exploitation
+- what can you do after you get access to them 
+- how to interact with the system, execute system commands, 
+record keystrokes, open the webcam, use the hacked computer as a pivot
+to hack another computer 
+
+4. Website Hacking 
+- how websites work, how to gather information 
+about a target website, discover and exploit dangerous vulnerabilities
+to gain full control over the target website 
+
+-- at the end of each chapters, you're gonna learn how to 
+protect yourself from the attacks 

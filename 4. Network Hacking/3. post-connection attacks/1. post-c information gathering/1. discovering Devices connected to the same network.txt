@@ -1,0 +1,35 @@
+--> you can't gain access to a system if you don't have enough 
+information about it
+
+INFORMATION GATHERING
+- discover all devices on the network
+- display their: 
+-- IP address
+-- MAC address
+-- operating system
+-- open ports
+-- running services
+-- etc
+
+examples of programs to do this job really2 well:
+- nmap
+- netdiscover
+
+this is using netdiscover:
+> netdiscover -r 192.168.1.0/24
+
+note:
+-r this is the ip range that could be accessed by you
+
+this is not doing anything since this is not connected to a wifi network
+you have to use the wireless adapter aaand you have to make
+the natnetwork disabled so that you can scan from the 
+wifi network
+
+this is how: 
+
+devices -> network -> uncheck Connect Network Adapter
+
+note:
+this is not working on virtualbox
+

@@ -1,0 +1,27 @@
+WPA/WPA2 CRACKING
+- fixed all weaknesses in WEP
+- packets contain no useful data.
+- only packets that can aid with the cracking processes
+are the handshake packets.
+-- these are 4 packets sent when a client connects to the network
+
+the handshake packets are actually the only ones that are
+useful and they are got from when someone tries to connect
+to the router's network
+
+1. CAPTURING THE PACKETS
+this is the command: 
+> airodump-ng --bssid (router's mac) --channel (router's channel)
+--write wpa_handshake wlan0
+
+2. deauthenticating a client to make the client give us a 
+handshake packets
+
+this is the command: 
+> aireplay-ng --deauth 4 -a (router's mac) -c (client's mac) wlan0
+
+note:
+> --deauth usually is really big but this time this is really small
+therefore you are going to make the client don't notice 
+that he's being disconnected
+

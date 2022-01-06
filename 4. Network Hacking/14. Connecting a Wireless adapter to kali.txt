@@ -1,0 +1,25 @@
+CONNECTING A WIRELESS ADAPTER TO KALI 
+=====================================
+
+- this if for:
+wep, wpa/wpa2 cracking 
+
+- only needed for wifi cracking 
+
+- wireless adapter requirements:
+a. monitor mode 
+b. packet injection
+c. AP mode 
+
+> ifconfig
+this command is for listing all the network interfaces 
+
+- eth0 
+created by vmware to connect vm to host computer network
+
+- lo
+virtual loopback used in linux 
+
+- after connecting to the adapter you should see 
+wlan0
+

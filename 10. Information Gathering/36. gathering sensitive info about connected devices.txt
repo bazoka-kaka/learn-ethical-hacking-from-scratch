@@ -1,0 +1,49 @@
+GATHERING SENSITIVE INFO ABOUT CONNECTED DEVICES 
+================================================
+
+NETWORK MAPPING: NMAP/ZENMAP
+- huge security scanner 
+- from an ip/ip range it can:
+a. open port 
+b. running services 
+c. operating system 
+d. connected clients 
+etc
+
+good read:
+nmap book 
+
+> zenmap 
+note:
+this is the ui of nmap 
+
+there's a target section, you can enter any ip address there, 
+server, computer, etc 
+
+you can specify the whole range for example:
+192.168.1.0/24
+
+- in the profile 
+there are lots of things that you can do 
+
+- ping scan 
+note:
+this is just gonna ping every possible ip in the range 
+
+- quick scan 
+
+- quick scan plus 
+
+you can see the versions then you can browse what the vulnerabilities are in the browser 
+
+GAINING ACCESS 
+--------------
+ssh servers are those that you can gain full control with 
+
+password of an ssh server in iphone:
+alpine --> this is the default password 
+
+> ssh root@[ip address of target]
+
+
+

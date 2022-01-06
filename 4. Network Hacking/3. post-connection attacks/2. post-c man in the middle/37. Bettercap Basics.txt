@@ -1,0 +1,84 @@
+ARPSPOOFING USING BETTERCAP
+- framework to run network attacks
+- can be used to:
+-- arp spoof targets (redirect the flow of packets)
+-- sniff data (urls, username, passwords)
+-- bypass HTTPS
+-- redirect domain requests (DNS spoofing)
+-- inject code in loaded pages
+-- and more
+use:
+bettercap -iface [interface]
+
+note: bettercap could be used exactly what we did with arp spoof
+so we can use it to run an arp spoofing attack, to intercept
+connections and it can be  used to do so much more, we can
+use it to capture data and analyze it and see usernames and 
+passwords, bypass https and potentially bypass hsts, dns spoofing, 
+inject code into loaded pages, and so on
+
+this is showing all the things you can do with bettercap command:
+> bettercap --help
+
+this is the command to run bettercap:
+> bettercap -iface wlan0
+
+note: this is strange since it uses -iface not -i
+
+now we are inside the bettercap (not the usual kali linux terminal)
+
+to show all the commands we can do with bettercap:
+>> help
+
+note: what's really important is the modules
+so theses are all the modules that we can get or all the things
+that we can get bettercap to do
+
+we can type "help" followed by any modules there is 
+this will show you a help menu that shows you how to use
+this specific module
+
+example: we are going to show the net.probe and net.recon module
+
+this is the command: 
+>> help net.probe
+
+now we want to do this:
+>> net.probe on
+
+note: this will start discovering clients connected to the same
+network as us
+
+and after we turned net.probe on we are going to see
+if we type "help" again the net.recon automatically gets
+turned on too
+
+this is because net.probe sends probe requests to all possible 
+ips and then if we get a response, the net.recon will be
+the one detecting this responses by monitoring my ARP cache
+then add all these IPs in a nice list so
+we can target them. 
+
+after net.recon  is already running, we can do net.show
+to show all the clients connected to the network
+this is the command:
+>> net.show
+
+start up
+uncanny encounter
+crush landing on you
+
+to see all the help with arp.spoof:
+>> help arp.spoof
+
+set the arp.spoof.fullduplex to make the spoofing attack
+2 ways:
+>> set arp.spoof.fullduplex true
+
+set the targets:
+>> set net.spoof.targets (targets)
+example:
+>> set net.spoof.targets 192.168.1.24
+
+run the spoofing attack:
+>> arp.spoof on

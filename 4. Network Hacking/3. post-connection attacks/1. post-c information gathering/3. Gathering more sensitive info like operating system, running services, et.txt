@@ -1,0 +1,17 @@
+the option in the previous zenmap continuations: 
+
+3. quick scan plus
+this is going to be slower but even more information
+this is what we'll see:
+operating system, device type(phone router etc), program
+version running on the discovered ports
+
+(before we know what port is open but we don't know what program
+is running on it)
+
+what we are going to do is: google and look for vulnerabilities
+that is running on a specific version of an open ports
+and we might actually find something!
+
+this is in the gaining access section!
+

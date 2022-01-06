@@ -1,0 +1,15 @@
+NETWORK BASICS 
+==============
+
+- network = a number of clients connected to each other 
+
+- clients connect to each other to share data or resource 
+
+- example of a resource: internet 
+
+- all networks wire or not has the same principle:
+you have to go through the router, then you just have 
+to make yourself as the router 
+
+- there are packets that are transfered in the air 
+which is the information

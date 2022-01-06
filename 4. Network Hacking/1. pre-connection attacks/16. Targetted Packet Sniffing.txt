@@ -1,0 +1,64 @@
+now we are going to just do some airodump-ng 
+againts one network only to see more detailed information
+that it could show
+
+this is the command: 
+> airodump-ng --bssid (the bssid) --channel (the channel
+on that bssid) --write (file name) wlan0
+
+note:
+what we can see after this command is that 
+we are gonna see just one network and we are gonna
+see a completely new section which is just the devices
+that are connected to that particular network
+
+and after we do the sniffing we are now able to 
+see in our current working directory that we have
+multiple files
+airodump-ng is going to automatically append -01
+to our files so make sure the next time you do 
+some airodump-ng you use the appending of
+those file names with the -01 thing
+
+the main file that we are going to be using 
+is the .cap file which contains the datas
+that we captured during the period that airodump-ng
+was working on in here
+bassically this .cap file should contain everything 
+that was sent to and from our target network
+
+it could contains the following:
+- usernames
+- passwords
+- chat messages
+- anything taht these devices did on the internet
+
+since anything that they do have to be sent to the router
+
+problem:
+it's encrypted especially if it's WPA2 encrypted
+it's not going to be easy to see something like packets
+that are encrypted
+
+this is to see the files:
+> wireshark
+
+after we open the .cap files we are gonna see all the packets
+but these packets are encrypted therefore are useless
+for us and the only thing that is useful for us
+is the device manufacturer example it could be 
+a certain computer with its manufacturer or something
+like that (apple, windows, etc)
+
+note:
+this is not so useful is it? 
+
+in the next lecture we are gonna learn about breaking
+these things so we can see the passwords, usernames
+in plain text
+
+also you'll see how you can map all the computers
+on the same network, gather detailed information
+about them, hack into them, and really2 cool stuffs
+
+

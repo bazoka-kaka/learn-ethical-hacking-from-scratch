@@ -1,0 +1,21 @@
+NETWORK HACKING
+A. Pre-connection Attacks
+B. Gaining Access
+C. Post-connection Attacks
+
+A. Pre-connection Attacks
+here you are going to do something to the network 
+without actually getting connected to the internet
+or to any network especially the network that you
+are trying to do something with
+
+B. Gaining Access
+here we are learning how to crack wifi and gain access
+to wifi networks whether they use WEP, WPA, or WPA2
+
+C. Post-connection Attacks 
+here you are going to do something that will apply for both
+wifi and wired networks
+this apply whenever you are able to connect to the network
+once you are able to connect with the network
+

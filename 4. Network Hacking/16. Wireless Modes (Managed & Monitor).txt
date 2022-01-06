@@ -1,0 +1,47 @@
+WIRELESS MODES (MANAGED AND MONITOR)
+====================================
+
+- when you communicate with other devices through your router:
+you use a package 
+
+- each package contains mac address so that it knows where to go
+and identifies itself
+
+- the package contains these two things:
+a. destination mac 
+b. source mac 
+
+- to capture all of these package, need to change 
+to monitor mode : you're gonna receive everything 
+that is in the range of your vm (not only the things 
+that are intended to be sent to you)
+
+- shows all the wireless interfaces:
+> iwconfig
+
+note:
+we can see the mode here (by default is managed)
+
+this means that it'll only capture devices that has the destination 
+mac as our virtual machine 
+
+(only capturing things that are meant to sent to the vm)
+
+- changing to monitor mode:
+killing the wlan:
+> ifconfig wlan0 down 
+killing all the processes that could interupt when changing to monitor mode:
+> airmon-ng check kill 
+note:
+you also killed your internet connection 
+enable monitor mode:
+> iwconfig wlan0 mode monitor 
+reenabling the interface:
+> ifconfig wlan0 up 
+
+another method to enable monitor mode:
+https://www.youtube.com/watch?v=wiIoR_0epvs
+
+- returning to managed mode and restart internet connection:
+> service NetworkManager restart
+

@@ -1,0 +1,25 @@
+WIFI BANDS - 2.4 GHz & 5 GHz Frequencies
+========================================
+
+- WIFI BANDS 
+a. decides the Frequency range that can be used 
+b. determines the channels that can be used 
+c. clients need to support band used by router to communicate with it 
+d. data can be sniffed from a certain band if the wireless adapter 
+used supports that band 
+
+- most common wifi bands:
+a. a uses 5 GHz only
+b. b, g both use 2.4GHz frequency only 
+c. n uses 5 and 2.4 GHz 
+d. ac uses frequencies lower than 6 GHz 
+
+- sometimes, lots of the wifis aren't able to be seen 
+this is because it's on different frequencies 
+
+to configure airodump-ng to find all of the frequencies:
+> airodump-ng --band abg wlan0 
+
+note:
+abg means the bands it's trying to find 
+

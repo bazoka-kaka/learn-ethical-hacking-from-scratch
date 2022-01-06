@@ -1,0 +1,78 @@
+DEAUTHENTICATION ATTACK
+
+Disconnect any client from any network
+- works on encrypted networks (WEP, WPA, WPA2)
+- No need to know the network key
+- No need to connect to the network
+
+use:
+aireplay-ng --deauth [deauthpackets] -a [NetworkMac]
+-c [TargetMac] [Interface]
+
+this attack allows us to disconnect any device
+from any network before connecting to these networks
+
+how this works:
+1. we change our MAC address to the MAC
+address of the target client
+2. tell the router that we want to disconnect 
+from it
+3. pretend to be the router again by changing the router's
+MAC address
+4. tell the client that the client requested
+to disconnect from it so the router is going to 
+disconnect it
+
+this will allow us to deauthenticate any client from any
+network
+
+we're not going to do this manually we are going to 
+use a tool that is called aireplay-ng
+
+this is the command: 
+> aireplay-ng deauth 10000000 -a (mac of target router)
+-c (client's mac address) wlan0
+
+note:
+you want to make a really big number therefore
+you are going to deauthenticate for a longer period
+of time and the only way to get that particular device
+to connect to the internet again is to press
+ctrl + c from aireplay-ng
+
+this command is not enough sometimes so you have to actually
+run airodump-ng againts your target network
+
+so the solution is:
+1. you have to use airodump-ng againts your target
+network
+2. you do the aireplay-ng attack againts both your
+client device and your target router
+
+this is the attack:
+> airodump-ng --bssid (bssid of router) --channel 
+(router's channel) wlan0
+> aireplay-ng deauth 10000000 -a (router's mac)
+-c (client's mac) wlan0
+
+SOCIAL ENGINEERING:
+1. disconnect target from its network
+2. call the user and pretend to be a person from
+the departement of IT department 
+3. ask them to install a virus or a backdoor
+telling them this will fix their issue
+you could also set, create other fake access point
+and get them to connect to fake access point
+and then start spying on them from that access point
+
+you can also use this to capture the handshake
+this is vital in WPA cracking and we'll talk about it
+once we go to the WPA cracking stuff
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+NETWORK MAPPING NMAP/ZENMAP
+- HUGE security scanner
+- from an IP/IP range it can discover:
+-- open ports
+-- running services
+-- operating systems
+-- connected clients
+-- + more
+
+note:
+nmap works far better than netdiscover since it covers 
+a whole lots more things than netdiscover
+
+you'll see all the things like the open ports, programs
+running on those ports, determine the computer name, 
+the operating system running on that computer, 
+if you are on a network, you'll be able to discover 
+all of the connected clients, bypass security, firewalls, 
+and much more
+
+Nmap is so huge that it has books and complete courses 
+just covering nmap
+
+-- you just open zenmap:
+> zenmap
+
+insert the ip address range on the target example: 
+192.168.1.0/24
+
+then choose a profile.
+1. ping scan
+This time we are going to do some ping scan
+note: this ping attack will show devices connected 
+to the same network as us. a lot of them will not response
+on the ping scan even if they are alive
+MEANING THIS PING SCAN WILL NOT SHOW ALL THE DEVICES
+CONNECTED ON THE SAME NETWORK
+
+we could see the vendor of these devices also
+example: HTC, Apple, Cisco
+
+2. quick scan
+this is slower than ping scan but shows more information
+note:
+this is also showing up the open ports other than those
+shown on the ping scan
+
+note:
+port 22 or ssh is a system that allows us to remote access it
+meaning we are going to be able to function like a controller to it
+

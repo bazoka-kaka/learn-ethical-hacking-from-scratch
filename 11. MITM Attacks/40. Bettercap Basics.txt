@@ -1,0 +1,72 @@
+BETTERCAP 
+=========
+
+- framework to run network attacks 
+- can be used to:
+a. arp spoof targets (redirect the flow of packets)
+b. sniff datas (url, usernames, passwords)
+c. bypass https
+d. redirect domain requests (DNS spoofing)
+e. inject code in loaded pages
+f. and more!
+
+> bettercap -iface [interface]
+
+- to get help for bettercap 
+> bettercap --help 
+
+after openning bettercap 
+------------------------
+>> help 
+note:
+this is to get the list of all of the commands in 
+bettercap 
+
+- what we really wanna pay attention to now: 
+the modules after you ask help in bettercap 
+
+>> help [moduleName]
+note:
+this is gonna show how to use the specific module 
+
+example:
+>> help net.probe
+
+note:
+net.probe is for sending UDP packets 
+to discover devices on the same network 
+
+>> net.probe off
+note:
+this is to turn off the net.probe or you 
+can turn it on using the on keyword 
+
+- we're now gonna turn on the net.probe 
+>> net.probe on 
+note:
+this is gonna start discovering clients connected to the 
+same network 
+
+this will also automatically start 
+the net.recon 
+
+reason:
+net.probe sends request to all possible IPs 
+then net.recon will be the one detecting the response
+
+net.recon --> this is for detecting responses
+
+>> net.show 
+note:
+this is gonna show all the connected clients 
+this is only gonna work after we activated:
+a. net.probe 
+b. net.recon 
+
+note:
+in the table:
+name --> the type of device 
+example:
+gateway, wlan0 
+
+vendor --> hardware used in each of these networks

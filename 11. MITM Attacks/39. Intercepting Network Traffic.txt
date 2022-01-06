@@ -1,0 +1,30 @@
+INTERCEPTING NETWORK TRAFFIC 
+============================
+
+ARP SPOOFING ATTACK 
+-------------------
+- arpspoof tool to run arp spoofing attacks
+- simple and reliable 
+- ported to most operating system including android and IOS 
+- usage is always the same 
+
+use:
+> arpspoof -i [interface] -t [clientIP] [gatewayIP]
+> arpspoof -i [interface] -t [gatewayIP] [clientIP]
+
+note:
+these are only gonna make you the man in the middle, 
+then you have to use another tool to implement 
+packet sniffer like wireshark to analyze the data 
+and do more stuffs with it 
+
+note:
+by default kali linux is not gonna receive all the data 
+flowing, because it's functioning as an operating system 
+and not a router 
+
+- to enable port forwarding:
+> echo 1 > /proc/sys/net/ipv4/ip_forward
+
+note:
+the computer is gonna still 

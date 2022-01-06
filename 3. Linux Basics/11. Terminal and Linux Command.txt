@@ -1,0 +1,60 @@
+TERMINAL AND LINUX COMMANDS
+===========================
+
+this is gonna explain all the linux command that you wanna know:
+https://explainshell.com/
+
+list of linux commands:
+https://www.mediacollege.com/linux/command/linux-command.html
+
+linux commands:
+> pwd
+prints the current working dir
+
+> ls
+list all the directories and files in the current working directory 
+
+> cd
+navigates into another directory 
+
+> cd ..
+go back to the earlier directory 
+
+> man [command]
+requesting the manual of [command]
+note:
+[command] could be any command in the linux command 
+example: man ls 
+
+> ls -l 
+read more information about the file 
+
+> clear
+this clears the command 
+
+> [command] --help 
+this gonna show you the help message telling you what this command is 
+what this program is the argument that it takes, how to use this argument, 
+examples at the bottom 
+
+- installing programs in Kali from the terminal:
+a. update the sources where Kali can search and download programs from:
+> apt-get update 
+note:
+apt-get --> application that allows us to download and install programs 
+update --> updates the list of all the programs that we can install 
+
+b. start installing applications
+> apt-get install [program name]
+note:
+install --> installing a program specified
+[program name] --> this could be any program that is available in the apt-get 
+list of programs
+
+example:
+installing terminal program that could have multiple windows (terminator)
+
+> apt-get install terminator 
+
+note:
+this is gonna install the terminator program 

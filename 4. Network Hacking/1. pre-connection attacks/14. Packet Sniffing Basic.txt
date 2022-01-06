@@ -1,0 +1,55 @@
+PACKET SNIFFING USING AIRODUMP-NG
+- part of the aircrack-ng suit
+- airodump-ng is a packet sniffer
+- used to capture all packets within range
+- display detailed information about network
+around us
+- connected clients etc
+
+after we are enabling our monitor mode we are now
+able to do something which is capturing anything
+that is sent within our range even if that packet
+is not directed to us or doesn't hold our MAC address
+as its destination MAC or even if our computer or device
+is not connected to the network as long as it's within
+our range
+
+the thing that allows us to capture these packets
+is called airodump-ng that is part of aircrack-ng suit
+and it's a packet sniffer bassically a program
+designed to capture packets while you're in monitor mode
+
+this airodump-ng will allow us to see all the wireless
+networks around us and show us detailed information
+about its MAC address, channel, encryption, clients
+connected to this network, and so on
+
+HOW TO DO IT?
+1. enable monitor mode in your wireless adapter
+> iwconfig 
+note: this is going to list all the network interfaces
+in our machine make sure that the interface that you are
+using to connect to the network is actually 
+in monitor mode
+2. doing it
+> airodump-ng wlan0
+note:
+this is going to show some useful information
+if you want to end the program you could just use
+the ctrl+c key
+
+BSSID - the mac address of the wireless adapters
+PWR - this is the signal strength or the signal of the network
+the higher the better
+Beacons - frame sent by the networks to broadcast
+its existence
+#Data - these are the useful packets that we'll talk about later
+once we get to the cracking section
+#/s - this is the number of data packets that we collected
+in the past 10 seconds
+CH - this is the channel that the network works on
+MB - this is the maximum speed supported by the network
+ENC - this is the encryption used by the network
+CIPHER - this is the cipher used by the network
+AUTH - this is the authentication used by the network
+ESSID - the name of the wireless adapters around us

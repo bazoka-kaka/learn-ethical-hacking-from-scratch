@@ -1,0 +1,18 @@
+TARGETTED PACKET SNIFFING 
+=========================
+
+> airodump-ng --bssid [mac address] --channel [channel] --write test wlan0
+
+note:
+--write test --> write the result in a file called test 
+
+- after this you're gonna have some files 
+
+- the problem: 
+all of the data are encrypted 
+
+- open wireshark
+> wireshark
+
+note:
+you should open the file *.cap

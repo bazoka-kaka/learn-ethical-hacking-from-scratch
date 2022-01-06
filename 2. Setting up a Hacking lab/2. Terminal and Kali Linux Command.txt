@@ -1,0 +1,37 @@
+list of linux command: 
+https://www.mediacollege.com/linux/command/linux-command.html
+
+pwd - Current working dir
+ls - list all the things in the current dir
+cd - change directory
+ex: cd Desktop
+cd .. - back to the previous dir
+ex: cd ../../..
+man - the manual of certain command
+ex: man ls
+
+note: 
+ls -l --> this is long listing meaning you 
+are gonna se a more detailed information of all 
+the things inside our current directory
+
+ls --help --> this is telling you all the things
+that you can do with ls and the examples 
+also how to use them
+
+clear --> this is clearing hte screen
+
+INSTALLING PROGRAM FROM KALI FROM THE TERMINAL
+apt-get update --> apt-get is the name of the applications
+that allows us to download and update programs
+and update meaning you are going to update all 
+the programs that I can install
+
+installing the program:
+apt-get install terminator
+note: 
+here we are installing a program called terminator
+using apt-get application, if the program haven't existed
+it first download the terminator thing then 
+automatically install it too
+
